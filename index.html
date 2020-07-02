@@ -26,9 +26,13 @@
     }
     
     function findHouseTeam(){
+      let userInput = document.getElementById("fullNameInput").value;
+      
       for (let i = 0; i < result.length; i++){
-        console.log(result[i] + " " + i);
-        console.log(typeof result[i]);
+        if (result[i].toLowerCase().includes(userInput.toLowerCase())){
+          userArray = result[i].split(" ");
+          document.getElementById("HouseTeamName").innerHTML = userArray[userArray.length - 1];
+        }
       }
     }
     
