@@ -31,7 +31,7 @@
       for (let i = 0; i < result.length; i++){
         if (result[i].toLowerCase().includes(userInput.toLowerCase())){
           let userArray = result[i].split(" ");
-          document.getElementById("HouseTeamName").innerHTML = userArray[userArray.length - 2];
+          document.getElementById("HouseTeamName").innerHTML = userArray[userArray.length - 1];
           console.log(userArray[userArray.length - 1]);
           console.log(userArray[userArray.length - 2]);
         }
