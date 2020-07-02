@@ -11,13 +11,10 @@
   
   <script>
     // This function right here works perfectly, maybe make it so that it does this at the beginning, when the website loads? 
-    var filePath = "";
+    const filePath = "Names.txt";
     let result;
-    var xmlhttp;
     
     function loadFile(){
-      var filePath = "Names.txt";
-      var result = null;
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.open("GET", filePath, false);
       xmlhttp.send();
