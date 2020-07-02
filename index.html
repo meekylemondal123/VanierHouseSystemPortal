@@ -9,8 +9,23 @@
     </style>
   </head>
   
+  <script>
+    function loadFile(filePath){
+      var result = null;
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET", filePath, false);
+      xmlhttp.send();
+      
+      if (xmlhttp.status == 200) {
+        result = xmlhttp.responseText;
+      }
+      
+      document.getElementById("TestMessage").innerHTML = result;
+    }
+    
+  </script>
   <body>
-    <h1>Welcome to Vanier's House System Portal!</h1>
-    <button onclick="loadFile()">Click me to load the file</button>
+    <h1 id="TestMessage">Welcome to Vanier's House System Portal!</h1>
+    <button onclick="loadFile("Names.txt")">Click me to load the file</button>
    </body>
 </html>
