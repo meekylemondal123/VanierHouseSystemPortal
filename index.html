@@ -10,6 +10,11 @@
   </head>
   
   <script>
+    // This function right here works perfectly, maybe make it so that it does this at the beginning, when the website loads? 
+    var filePath = "";
+    var result;
+    var xmlhttp;
+    
     function loadFile(){
       var filePath = "Names.txt";
       var result = null;
@@ -19,14 +24,16 @@
       
       if (xmlhttp.status == 200) {
         result = xmlhttp.responseText;
-      }
-      
+      }     
+    }
+    
+    function displayNames(){
       document.getElementById("TestMessage").innerHTML = result;
     }
     
   </script>
-  <body>
+  <body onload="loadFile()">
     <h1 id="TestMessage">Welcome to Vanier's House System Portal!</h1>
-    <button onclick="loadFile()">Click me to load the file</button>
+    <button onclick="displayNames()">Click me to load the file</button>
    </body>
 </html>
