@@ -20,30 +20,12 @@
       xmlhttp.send();
       
       if (xmlhttp.status == 200) {
-        result = xmlhttp.responseText.split(" ");
+        result = xmlhttp.responseText.split("%");
       }
     }
     
     function findHouseTeam(){
-      // Here figure out how to find the user's name
-      let valour = "Valour";
-      let justice = "Justice";
-      let wisdom = "Wisdom";
-      let harmony = "Harmony";
-      
-      let fullName = document.getElementById("fullNameInput").value;
-      let fullNameArray = fullName.split(" ");
-      
-      for (i = 0; i < result.length; i++){
-        // Checking if the first name is the same 
-        if (result[i] == fullNameArray[0]){
-          // Checking if the last name is the same 
-          if (result[i + fullNameArray.length - 2] == fullNameArray[fullNameArray.length - 1]){
-            document.getElementById("HouseTeamName").innerHTML = result[i + fullNameArray.length - 1];
-            break;
-          }
-        }
-      }
+      console.log(result);
     }
     
   </script>
