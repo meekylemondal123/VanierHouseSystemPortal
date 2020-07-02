@@ -31,8 +31,10 @@
       console.log(userInput);
       
       for (let i = 0; i < result.length; i++){
-        console.log(result[i].toLowerCase() + " " + userInput.toLowerCase());
-        console.log(result[i].toLowerCase().includes(userInput.toLowerCase()));
+        if (results[i].toLowerCase().includes(userInput.toLowerCase())){
+          let userArray = results[i].split(" ");
+          console.log(userArray);
+        }
       }
     }
     
