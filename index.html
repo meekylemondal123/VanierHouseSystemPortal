@@ -28,12 +28,18 @@
     function findHouseTeam(){
       let userInput = document.getElementById("fullNameInput").value;
       
+      /*
       for (let i = 0; i < result.length; i++){
         if (result[i].toLowerCase().includes(userInput.toLowerCase())){
           let userArray = result[i].split(" ");
           document.getElementById("HouseTeamName").innerHTML = userArray[userArray.length - 2];
           console.log(userArray[userArray.length - 1]);
         }
+      }
+      */
+      
+      for (let i = 0; i < result.length; i++){
+        console.log(result[i].split(" "));
       }
     }
     
