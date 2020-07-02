@@ -29,6 +29,12 @@
       let userInput = document.getElementById("fullNameInput").value;
       
       console.log(userInput);
+      
+      for (let i = 0; i < results.length; i++){
+        console.log(results[i] + " " + userInput);
+        console.log(results[i].includes(userInput));
+      }
+      
       /* for (let i = 0; i < result.length; i++){
         if (result[i].toLowerCase().includes(userInput.toLowerCase())){
           userArray = result[i].split(" ");
