@@ -31,7 +31,6 @@
       for (let i = 0; i < result.length; i++){
         if (result[i].toLowerCase().includes(userInput.toLowerCase())){
           let userArray = result[i].split(" ");
-          // This is only if there is a space after the student's line in the notepad file, make sure to change it to 1 when properly formated 
           document.getElementById("HouseTeamName").innerHTML = userArray[userArray.length - 2];
           console.log(userArray[userArray.length - 1]);
         }
