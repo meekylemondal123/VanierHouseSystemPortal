@@ -32,16 +32,8 @@
       
       for (let i = 0; i < result.length; i++){
         console.log(result[i] + " " + userInput);
-        console.log(result[i].includes(userInput));
+        console.log(result[i].toLowerCase().includes(userInput.toLowerCase()));
       }
-      
-      /* for (let i = 0; i < result.length; i++){
-        if (result[i].toLowerCase().includes(userInput.toLowerCase())){
-          userArray = result[i].split(" ");
-          document.getElementById("HouseTeamName").innerHTML = userArray[userArray.length - 1];
-        }
-      }
-      */
     }
     
   </script>
