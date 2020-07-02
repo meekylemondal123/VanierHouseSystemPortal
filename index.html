@@ -27,13 +27,15 @@
       }     
     }
     
-    function displayNames(){
-      document.getElementById("TestMessage").innerHTML = result;
+    function findHouseTeam(){
+      document.getElementById("TestMessage").innerHTML = result.split("\n");
     }
     
   </script>
   <body onload="loadFile()">
     <h1 id="TestMessage">Welcome to Vanier's House System Portal!</h1>
-    <button onclick="displayNames()">Click me to load the file</button>
+    <label for="fullNameInput">Please enter your full name (according to the attendance): </label>
+    <input type="text" id="fullNameInput" name="fullNameInput">
+    <button onclick="findHouseTeam()">Find Your House Team!</button>
    </body>
 </html>
