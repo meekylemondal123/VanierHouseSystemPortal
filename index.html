@@ -20,11 +20,12 @@
       xmlhttp.send();
       
       if (xmlhttp.status == 200) {
-        result = xmlhttp.responseText;
+        result = xmlhttp.responseText.split(" ");
       }
     }
     
     function findHouseTeam(){
+      // Here figure out how to find the user's name
       document.getElementById("TestMessage").innerHTML = result;
     }
     
