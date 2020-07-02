@@ -32,8 +32,17 @@
       let harmony = "Harmony";
       
       let fullName = document.getElementById("fullNameInput").value;
+      let fullNameArray = fullName.split(" ");
       
-      document.getElementById("TestMessage").innerHTML = fullName;
+      for (i = 0; i < result.length; i++){
+        // Checking if the first name is the same 
+        if (result[i] == fullNameArray[0]){
+          // Checking if the last name is the same 
+          if (result[i + fullNameArray.length - 2] == fullNameArray[fullNameArray.length - 1]){
+            document.getElementById("HouseTeamName").innerHTML = result[i + fullNameArray.length - 1];
+            break;
+        }
+      }
     }
     
   </script>
@@ -42,5 +51,6 @@
     <label for="fullNameInput">Please enter your full name (according to the attendance): </label>
     <input type="text" id="fullNameInput" name="fullNameInput">
     <button onclick="findHouseTeam()">Find Your House Team!</button>
+    <p id="HouseTeamName"></p>
    </body>
 </html>
