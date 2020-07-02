@@ -20,12 +20,14 @@
       xmlhttp.send();
       
       if (xmlhttp.status == 200) {
-        result = xmlhttp.responseText.split("%");
+        result = xmlhttp.responseText.split("\\n");
       }
     }
     
     function findHouseTeam(){
-      document.getElementById("HouseTeamName").innerHTML = result;
+      for (let i = 0; i < result.length; i++){
+        console.log(result[i]);
+      }
     }
     
   </script>
