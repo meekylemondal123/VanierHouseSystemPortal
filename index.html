@@ -28,14 +28,15 @@
     function findHouseTeam(){
       let userInput = document.getElementById("fullNameInput").value;
       
-      for (let i = 0; i < result.length; i++){
+      console.log(userInput);
+      /* for (let i = 0; i < result.length; i++){
         if (result[i].toLowerCase().includes(userInput.toLowerCase())){
           userArray = result[i].split(" ");
           document.getElementById("HouseTeamName").innerHTML = userArray[userArray.length - 1];
         }
       }
     }
-    
+    */ 
   </script>
   <body onload="loadFile()">
     <h1 id="TestMessage">Welcome to Vanier's House System Portal!</h1>
